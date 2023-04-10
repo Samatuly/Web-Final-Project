@@ -1,100 +1,101 @@
 body {
+margin: 0;
+font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+}
+
+nav ul {
     margin: 0;
-    font-family: Arial, sans-serif;
-    }
+    padding: 0;
+    list-style: none;
+    text-align: right;
+}
 
-    header {
-        background-color: #333;
-        color: #fff;
-        padding: 20px;
-    }
+nav li {
+    display: inline-block;
+    margin-left: 40px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
 
-    nav ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        text-align: right;
-    }
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+}
 
-    nav li {
-        display: inline-block;
-        margin-left: 20px;
-    }
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
 
-    nav a {
-        color: #fff;
-        text-decoration: none;
-    }
+.search {
+    background-color: #f2f2f2;
+    padding: 40px;
+    text-align: center;
+}
 
-    main {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 40px;
-    }
+.search h2 {
+    margin-top: 0;
+}
 
-    .search {
-        background-color: #f2f2f2;
-        padding: 40px;
-        text-align: center;
-    }
+.search input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
 
-    .search h2 {
-        margin-top: 0;
-    }
+.search button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
 
-    .search input {
-        padding: 10px;
-        font-size: 16px;
-        border-radius: 4px;
-        margin-right: 10px;
-    }
+.job-listings {
+    margin-top: 40px;
+}
+.job-listings ul {
+    list-style: none;
+    padding: 0;
+}
 
-    .search button {
-        padding: 10px 20px;
-        font-size: 16px;
-        border: none;
-        border-radius: 4px;
-        background-color: #333;
-        color: #fff;
-        cursor: pointer;
-    }
+.job-listings li {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
 
-    .job-listings {
-        margin-top: 40px;
-    }
-    .job-listings ul {
-        list-style: none;
-        padding: 0;
-    }
+.job-listings li h3 {
+    margin-top: 0;
+}
 
-    .job-listings li {
-        border: 1px solid #ccc;
-        padding: 20px;
-        margin-bottom: 20px;
-    }
+.job-listings li p {
+    margin-bottom: 10px;
+}
 
-    .job-listings li h3 {
-        margin-top: 0;
-    }
+.job-listings li a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+}
 
-    .job-listings li p {
-        margin-bottom: 10px;
-    }
-
-    .job-listings li a {
-        display: inline-block;
-        padding: 10px 20px;
-        font-size: 16px;
-        border: none;
-        border-radius: 4px;
-        background-color: #333;
-        color: #fff;
-        text-decoration: none;
-    }
-
-    footer {
-        background-color: #333;
-        color: #fff;
-        padding: 20px;
-        text-align: center;
-    }
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}

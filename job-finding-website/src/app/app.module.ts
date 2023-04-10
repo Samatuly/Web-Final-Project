@@ -7,6 +7,7 @@ import { LoginAsEmployerComponent } from './login-as-employer/login-as-employer.
 import { LoginAsEmployeeComponent } from './login-as-employee/login-as-employee.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { TopBarComponent } from './top-bar/top-bar.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { RegistrationComponent } from './registration/registration.component';
     LoginAsEmployeeComponent,
     MainPageComponent,
     RegistrationComponent,
+    TopBarComponent,
   ],
   imports: [
     BrowserModule,
