@@ -8,4 +8,4 @@
 <em>Team members:</em>
 <li>Samatuly Serikbolsyn</li>
 <li>Bektemis Almat</li>
-<li>Tulegaliyev Dias</li>
+<li>?</li>
