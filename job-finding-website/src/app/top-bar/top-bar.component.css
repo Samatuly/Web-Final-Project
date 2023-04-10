@@ -10,6 +10,7 @@
 
 .top-bar__logo{
     color: #ffffff;
+    cursor: pointer;
 }
 
 .top-bar__search input[type="text"] {
