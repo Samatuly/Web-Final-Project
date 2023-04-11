@@ -54,3 +54,8 @@ label {
 #submit:hover {
     background-color: #555555;
 }
+.signup_employer{
+    text-align: center;
+    padding-top: 20px;
+    cursor: pointer;
+}
