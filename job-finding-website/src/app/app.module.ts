@@ -11,6 +11,10 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { AfterSignInComponent } from './after-sign-in/after-sign-in.component';
 import { AfterSignInAdminComponent } from './after-sign-in-employer/after-sign-in-admin.component';
 import { RegistrationAdminComponent } from './registration-employer/registration-admin.component';
+import { TopBarAfterComponent } from './top-bar-after/top-bar-after.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ProfileEmployerComponent } from './profile-employer/profile-employer.component';
+import { TopBarAfterEmployerComponent } from './top-bar-after-employer/top-bar-after-employer.component';
 
 
 @NgModule({
@@ -24,6 +28,10 @@ import { RegistrationAdminComponent } from './registration-employer/registration
     AfterSignInComponent,
     AfterSignInAdminComponent,
     RegistrationAdminComponent,
+    TopBarAfterComponent,
+    ProfileComponent,
+    ProfileEmployerComponent,
+    TopBarAfterEmployerComponent,
   ],
   imports: [
     BrowserModule,
