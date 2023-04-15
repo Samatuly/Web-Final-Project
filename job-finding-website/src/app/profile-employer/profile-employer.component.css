@@ -1,0 +1,14 @@
+.employer-profile {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.employer-profile h2 {
+    margin-top: 0;
+}
+
+.employer-profile p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}

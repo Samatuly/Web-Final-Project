@@ -12,6 +12,9 @@ import {TopBarComponent} from "./top-bar/top-bar.component";
 import {ProfileComponent} from "./profile/profile.component";
 import {ProfileEmployerComponent} from "./profile-employer/profile-employer.component";
 import {TopBarAfterEmployerComponent} from "./top-bar-after-employer/top-bar-after-employer.component";
+import {CreateEmployerComponent} from "./create-employer/create-employer.component";
+import {MyVacanciesEmployerComponent} from "./my-vacancies-employer/my-vacancies-employer.component";
+import {CandidatesEmployerComponent} from "./candidates-employer/candidates-employer.component";
 
 const routes: Routes = [
   {path: '', component: MainPageComponent},
@@ -25,7 +28,10 @@ const routes: Routes = [
   {path: 'top-bar-after', component:TopBarAfterComponent},
   {path: 'top-bar-after-employer', component: TopBarAfterEmployerComponent},
   {path: 'profile', component: ProfileComponent},
-  {path: 'profile-employer', component:ProfileEmployerComponent},
+  {path: 'profile-employer', component: ProfileEmployerComponent},
+  {path: 'create-employer', component: CreateEmployerComponent},
+  {path: 'my-vacancies-employer', component: MyVacanciesEmployerComponent},
+  {path: 'candidates-employer', component: CandidatesEmployerComponent}
 ]
 
 @NgModule({

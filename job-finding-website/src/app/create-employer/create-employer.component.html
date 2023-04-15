@@ -1,0 +1,19 @@
+<app-top-bar-after-employer></app-top-bar-after-employer>
+<div class="container">
+    <h1>Create Job Vacancy</h1>
+    <form>
+        <label for="title">Job Title:</label>
+        <input type="text" id="title" name="title" required>
+        <label for="company">Company:</label>
+        <input type="text" id="company" name="company" required>
+        <label for="experience">Minimum Required Job Experience (in year) :</label>
+        <input type="number" id="experience" name="experience" min="0" required>
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required>
+        <label for="salary">Salary:</label>
+        <input type="text" id="salary" name="salary" required>
+        <label for="description">Job Description:</label>
+        <textarea type="text" id="description" name="description" rows="10" cols="50" minlength="100" required></textarea>
+        <button type="submit" id="submit" routerLink="/login">Create</button>
+    </form>
+</div>

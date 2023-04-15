@@ -15,6 +15,9 @@ import { TopBarAfterComponent } from './top-bar-after/top-bar-after.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileEmployerComponent } from './profile-employer/profile-employer.component';
 import { TopBarAfterEmployerComponent } from './top-bar-after-employer/top-bar-after-employer.component';
+import { CreateEmployerComponent } from './create-employer/create-employer.component';
+import { MyVacanciesEmployerComponent } from './my-vacancies-employer/my-vacancies-employer.component';
+import { CandidatesEmployerComponent } from './candidates-employer/candidates-employer.component';
 
 
 @NgModule({
@@ -32,6 +35,9 @@ import { TopBarAfterEmployerComponent } from './top-bar-after-employer/top-bar-a
     ProfileComponent,
     ProfileEmployerComponent,
     TopBarAfterEmployerComponent,
+    CreateEmployerComponent,
+    MyVacanciesEmployerComponent,
+    CandidatesEmployerComponent,
   ],
   imports: [
     BrowserModule,
