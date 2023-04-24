@@ -3,30 +3,22 @@
   <div class="search">
     <h2>Find Your Next Job</h2>
     <form>
-      <input type="text" placeholder="Job Title">
-      <button>Search</button>
+      <input type="text" [(ngModel)]="query" name="q" placeholder="Search...">
+      <button type="submit" (click)="searchVacancies(query)">Search</button>
     </form>
   </div>
 
-  <div class="job-listings">
-    <h2>Featured Jobs</h2>
-    <ul>
-      <li>
-        <h3>Web Developer</h3>
-        <p>Acme Co. is seeking an experienced web developer to join our team.</p>
-        <a href="#">Apply Now</a>
-      </li>
-      <li>
-        <h3>Marketing Manager</h3>
-        <p>XYZ Inc. is looking for a marketing manager to lead our team.</p>
-        <a href="#">Apply Now</a>
-      </li>
-      <li>
-        <h3>Sales Representative</h3>
-        <p>123 Corp. is seeking a sales representative to grow our customer base.</p>
-        <a href="#">Apply Now</a>
-      </li>
-    </ul>
+  <div id = "main">
+    <div id = "vacancies">
+      <div class = "items" *ngFor = "let item of vacancies">
+        <div class = "item-details">
+          <a id = "link-vacancy">
+            <h2 class = "vacancy-name"> {{item.name}} </h2>
+          </a>
+          <h2>City: {{item.city}} </h2>
+        </div>
+      </div>
+    </div>
   </div>
 </main>
 

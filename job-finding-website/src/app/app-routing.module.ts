@@ -15,6 +15,8 @@ import {TopBarAfterEmployerComponent} from "./top-bar-after-employer/top-bar-aft
 import {CreateEmployerComponent} from "./create-employer/create-employer.component";
 import {MyVacanciesEmployerComponent} from "./my-vacancies-employer/my-vacancies-employer.component";
 import {CandidatesEmployerComponent} from "./candidates-employer/candidates-employer.component";
+import {HttpClientModule} from "@angular/common/http";
+import {SearchPageComponent} from "./search-page/search-page.component";
 
 const routes: Routes = [
   {path: '', component: MainPageComponent},
@@ -31,11 +33,12 @@ const routes: Routes = [
   {path: 'profile-employer', component: ProfileEmployerComponent},
   {path: 'create-employer', component: CreateEmployerComponent},
   {path: 'my-vacancies-employer', component: MyVacanciesEmployerComponent},
-  {path: 'candidates-employer', component: CandidatesEmployerComponent}
+  {path: 'candidates-employer', component: CandidatesEmployerComponent},
+  {path: 'search', component: SearchPageComponent}
 ]
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), HttpClientModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

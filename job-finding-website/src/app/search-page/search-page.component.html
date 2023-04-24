@@ -1,0 +1,16 @@
+<app-top-bar></app-top-bar>
+
+<div class="container">
+    <h1>My Vacancies: {{vacancies.length}}</h1>
+    <div id = "main">
+        <div id = "vacancies">
+            <div class = "items" *ngFor = "let item of vacancies">
+                <div class = "item-details" >
+                    <h2>Vacancy name: {{item.name}} </h2>
+                    <h2>Salary: {{item.salary}} tenge </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -34,7 +34,7 @@ label {
     color: #333333;
 }
 
-#title, #company, #location, #description, #salary, #experience {
+#title, #company, #location, #description, #salary, #experience, #city {
     padding: 10px;
     margin-bottom: 20px;
     border: none;

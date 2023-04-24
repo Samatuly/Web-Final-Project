@@ -35,6 +35,7 @@ main {
 .search {
     background-color: #f2f2f2;
     padding: 40px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
@@ -98,4 +99,25 @@ footer {
     color: #fff;
     padding: 20px;
     text-align: center;
+}
+
+.items {
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#link-vacancy:hover {
+    color: red;
+}
+
+#item-details {
+    padding: 10px;
+}
+
+#link-vacancy {
+    color: #2793e0;
+    text-decoration: none;
+    cursor: pointer;
 }

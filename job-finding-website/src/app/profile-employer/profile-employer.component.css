@@ -1,14 +1,60 @@
-.employer-profile {
-    max-width: 500px;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
     margin: 0 auto;
+    padding: 20px;
+}
+
+.profile {
     text-align: center;
 }
 
-.employer-profile h2 {
-    margin-top: 0;
+.profile img {
+    border-radius: 50%;
+    margin-bottom: 10px;
 }
 
-.employer-profile p {
-    font-size: 16px;
-    margin-bottom: 5px;
+.profile h1 {
+    font-size: 36px;
+    margin: 0;
 }
+
+.profile h2 {
+    font-size: 24px;
+    font-weight: normal;
+    margin: 5px 0 10px;
+}
+
+.profile p {
+    margin: 5px 0;
+}
+
+.profile a {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #333333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.profile a:hover {
+    background-color: #333333;
+}
+
+.profile hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+.profile h3 {
+    font-size: 24px;
+    margin: 20px 0 10px;
+}
+  

@@ -1,10 +1,31 @@
-import { Component } from '@angular/core';
+import {Component, OnChanges, OnInit} from '@angular/core';
+import {Vacancy} from "../models";
+import {ActivatedRoute} from "@angular/router";
+import {VacanciesService} from "../vacancies.service";
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-main-page',
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.css']
 })
-export class MainPageComponent {
+export class MainPageComponent implements OnInit{
+  vacancies: Vacancy[];
+  query: String;
+  constructor(private route: ActivatedRoute, private service: VacanciesService) {
+    this.vacancies = [];
+    this.query = '';
+  }
 
+  ngOnInit(){
+    this.getAllVacancies()
+  }
+
+  getAllVacancies() {
+    this.service.getVacancies().subscribe((data) => (this.vacancies = data));
+  }
+
+  searchVacancies(query: String) {
+    this.service.getSearchVacancies(query).subscribe((data) => this.vacancies = data);
+  }
 }
