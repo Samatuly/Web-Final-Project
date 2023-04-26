@@ -1,19 +1,19 @@
 <app-top-bar></app-top-bar>
 <div class="login">
-    <div class="login_box">
-        <h1>Find an Employees</h1>
-        <form>
-            <input type="text" class="login" placeholder="Email"> <br> 
-            <input type="password" class="login" placeholder="Password"> <br>
-            <button type="submit" class="btn btn-primary" routerLink="/after-sign-in-employer">Login to my personal account</button>
-        </form>
-    </div> <br>
+  <div class="login_box">
+    <h1>Find an Employees</h1>
+    <form>
+      <input type="text" class="login" placeholder="Email" [(ngModel)]="email"> <br> 
+      <input type="password" class="login" placeholder="Password" [(ngModel)]="password"> <br>
+      <button type="submit" class="btn btn-primary" (click)="loginEmployer()" routerLink="/after-sign-in-employer">Login to my personal account</button>
+    </form>
+  </div> <br>
 
-    <div class ="login_box">
-        <h1>Find a Job</h1>
-        <p>Resume publication and job search</p>
-        <form>
-            <button type="submit" class="btn btn-primary" routerLink="/login">I'm looking for a job</button>
-        </form>
-    </div>
-    </div>
+  <div class ="login_box">
+    <h1>Find a Job</h1>
+    <p>Resume publication and job search</p>
+    <form>
+      <button type="submit" class="btn btn-primary" (click)="findJob()" routerLink="/login">I'm looking for a job</button>
+    </form>
+  </div>
+</div>
