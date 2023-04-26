@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <ng-container *ngIf="!logged">
     <app-top-bar></app-top-bar>
     <div class="login">
@@ -23,3 +24,25 @@
 <ng-container *ngIf="logged">
     <app-after-sign-in></app-after-sign-in>
 </ng-container>
+=======
+<app-top-bar></app-top-bar>
+
+<div class="login">
+  <div class="login_box" *ngIf="userType === 'jobSeeker'">
+    <h1>Find a Job</h1>
+    <form>
+      <input type="text" class="login" placeholder="Email or phone number" [(ngModel)]="emailOrPhone"> <br> 
+      <input type="password" class="login" placeholder="Password" [(ngModel)]="password"> <br>
+      <button type="submit" class="btn btn-primary" (click)="login()" routerLink="/after-sign-in">Login</button>
+    </form>
+  </div>
+
+  <div class="login_box" *ngIf="userType === 'employer'">
+    <h1>Search for employees</h1>
+    <p>Placement of vacancies and access to the resume database</p>
+    <form>
+      <button type="submit" class="btn btn-primary" (click)="findEmployees()" routerLink="/login_employer">Find employees</button>
+    </form>
+  </div>
+</div>
+>>>>>>> 60fe61318796055bb636db35b38fb015c8d49188
