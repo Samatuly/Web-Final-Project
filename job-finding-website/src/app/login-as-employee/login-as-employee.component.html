@@ -1,15 +1,16 @@
 <app-top-bar></app-top-bar>
+
 <div class="login">
-  <div class="login_box">
+  <div class="login_box" *ngIf="userType === 'jobSeeker'">
     <h1>Find a Job</h1>
     <form>
       <input type="text" class="login" placeholder="Email or phone number" [(ngModel)]="emailOrPhone"> <br> 
       <input type="password" class="login" placeholder="Password" [(ngModel)]="password"> <br>
       <button type="submit" class="btn btn-primary" (click)="login()" routerLink="/after-sign-in">Login</button>
     </form>
-  </div> <br>
+  </div>
 
-  <div class ="login_box">
+  <div class="login_box" *ngIf="userType === 'employer'">
     <h1>Search for employees</h1>
     <p>Placement of vacancies and access to the resume database</p>
     <form>
