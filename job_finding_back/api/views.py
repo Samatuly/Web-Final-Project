@@ -1,8 +1,11 @@
 from msilib.schema import ListView
 
+from django.contrib.auth import authenticate, login
 from django.shortcuts import render
 from django.http.response import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
+from rest_framework import status
+from rest_framework_jwt.views import ObtainJSONWebToken
 from rest_framework.views import APIView
 from .serializers import vacancySerializer, companySerializer
 from .models import Vacancy, Company
@@ -138,3 +141,4 @@ def search_vacancies(request):
     results = Vacancy.objects.filter(Q(name__icontains=query))
     data = [v.to_json() for v in results]
     return JsonResponse(data, safe=False)
+

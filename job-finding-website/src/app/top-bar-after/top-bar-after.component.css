@@ -52,3 +52,6 @@
 .top-bar__menu a:hover {
     color: #333;
 }
+.top-bar-button{
+    cursor: pointer;
+}

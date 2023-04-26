@@ -102,7 +102,7 @@ footer {
 }
 
 .items {
-    border: 1px solid #000000;
+    box-shadow: 0 2px 12px #dbddde;
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 20px;
@@ -112,12 +112,24 @@ footer {
     color: red;
 }
 
-#item-details {
+.item-details {
     padding: 10px;
 }
 
-#link-vacancy {
+.vacancy-name {
+    font-weight: 700;
+    font-size: 22px;
     color: #2793e0;
     text-decoration: none;
     cursor: pointer;
+}
+
+.vacancy-city{
+    font-weight: 300;
+}
+
+.vacancy-salary{
+    font-weight: 600;
+    font-family: Arial, sans-serif;
+    padding: 10px 0px 10px 0px;
 }

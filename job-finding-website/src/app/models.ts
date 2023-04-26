@@ -14,3 +14,7 @@ export interface Vacancy{
     description: string;
     company_id: number;
 }
+
+export interface AuthToken{
+    token: string;
+}

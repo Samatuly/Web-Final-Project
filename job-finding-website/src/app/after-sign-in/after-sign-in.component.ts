@@ -9,12 +9,9 @@ import {VacanciesService} from "../vacancies.service";
   styleUrls: ['./after-sign-in.component.css']
 })
 export class AfterSignInComponent implements OnInit{
-  vacancies: Vacancy[];
-  query: String;
-  constructor(private route: ActivatedRoute, private service: VacanciesService) {
-    this.vacancies = [];
-    this.query = '';
-  }
+  vacancies: Vacancy[] = [];
+  query: string = '';
+  constructor(private route: ActivatedRoute, private service: VacanciesService) {}
 
   ngOnInit(){
     this.getAllVacancies()
@@ -24,7 +21,8 @@ export class AfterSignInComponent implements OnInit{
     this.service.getVacancies().subscribe((data) => (this.vacancies = data));
   }
 
-  searchVacancies(query: String) {
+  searchVacancies(query: string) {
     this.service.getSearchVacancies(query).subscribe((data) => this.vacancies = data);
   }
+
 }

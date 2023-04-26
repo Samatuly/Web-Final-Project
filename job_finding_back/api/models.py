@@ -1,6 +1,9 @@
 from django.db import models
+from django.contrib.auth import get_user_model
 
-class   Company(models.Model):
+User = get_user_model()
+
+class Company(models.Model):
     name = models.CharField(max_length=255)
     email = models.CharField(max_length=255)
 

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule, HttpClientXsrfModule } from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule, HttpClientXsrfModule} from "@angular/common/http";
 import { AppComponent } from './app.component';
 import { LoginAsEmployerComponent } from './login-as-employer/login-as-employer.component';
 import { LoginAsEmployeeComponent } from './login-as-employee/login-as-employee.component';
@@ -22,6 +22,7 @@ import { CandidatesEmployerComponent } from './candidates-employer/candidates-em
 import {RouterLink} from "@angular/router";
 import { SearchPageComponent } from './search-page/search-page.component';
 import {FormsModule} from "@angular/forms";
+import {AuthInterceptor} from "./AuthInterceptor";
 
 
 @NgModule({
@@ -52,7 +53,13 @@ import {FormsModule} from "@angular/forms";
         RouterLink,
         FormsModule
     ],
-  providers: [],
+  providers: [
+      {
+          provide: HTTP_INTERCEPTORS,
+          useClass: AuthInterceptor,
+          multi: true
+      }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

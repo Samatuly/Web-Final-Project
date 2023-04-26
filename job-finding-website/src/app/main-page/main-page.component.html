@@ -12,10 +12,9 @@
     <div id = "vacancies">
       <div class = "items" *ngFor = "let item of vacancies">
         <div class = "item-details">
-          <a id = "link-vacancy">
-            <h2 class = "vacancy-name"> {{item.name}} </h2>
-          </a>
-          <h2>City: {{item.city}} </h2>
+            <a class = "vacancy-name"> {{item.name}} </a>
+          <div class = "vacancy-salary">{{item.salary}} KZT</div>
+          <div class = "vacancy-city">{{item.city}} </div>
         </div>
       </div>
     </div>
