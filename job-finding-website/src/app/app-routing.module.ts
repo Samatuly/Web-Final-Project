@@ -17,9 +17,14 @@ import {MyVacanciesEmployerComponent} from "./my-vacancies-employer/my-vacancies
 import {CandidatesEmployerComponent} from "./candidates-employer/candidates-employer.component";
 import {HttpClientModule} from "@angular/common/http";
 import {SearchPageComponent} from "./search-page/search-page.component";
+import {MainPageCompanyComponent} from "./main-page-company/main-page-company.component";
+import {CompanyVacanciesComponent} from "./company-vacancies/company-vacancies.component";
+import {VacancyDetailComponent} from "./vacancy-detail/vacancy-detail.component";
 
 const routes: Routes = [
   {path: '', component: MainPageComponent},
+  {path: 'companies', component: MainPageCompanyComponent},
+  {path: 'companies/:id', component: CompanyVacanciesComponent},
   {path: 'top-bar', component:TopBarComponent},
   {path: 'login', component: LoginAsEmployeeComponent},
   {path: 'login_employer', component: LoginAsEmployerComponent},
@@ -34,7 +39,8 @@ const routes: Routes = [
   {path: 'create-employer', component: CreateEmployerComponent},
   {path: 'my-vacancies-employer', component: MyVacanciesEmployerComponent},
   {path: 'candidates-employer', component: CandidatesEmployerComponent},
-  {path: 'search', component: SearchPageComponent}
+  {path: 'search', component: SearchPageComponent},
+  {path: 'vacancy-detail', component: VacancyDetailComponent}
 ]
 
 @NgModule({

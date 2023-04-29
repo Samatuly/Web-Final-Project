@@ -130,15 +130,14 @@ class vacancy_detail(APIView):
 
         return JsonResponse(serializer.data)
 
-def top_ten_vacancies(request):
-    vacancies = Vacancy.objects.all().order_by('-salary')
-    top_ten = vacancies[:10]
-    vacancies_json = [i.to_json() for i in top_ten]
-    return JsonResponse(vacancies_json, safe=False)
-
 def search_vacancies(request):
     query = request.GET.get('q', '')
     results = Vacancy.objects.filter(Q(name__icontains=query))
     data = [v.to_json() for v in results]
     return JsonResponse(data, safe=False)
 
+def search_companies(request):
+    query2 = request.GET.get('q', '')
+    results = Company.objects.filter(Q(name__icontains=query2))
+    data = [v.to_json() for v in results]
+    return JsonResponse(data, safe=False)

@@ -23,6 +23,9 @@ import {RouterLink} from "@angular/router";
 import { SearchPageComponent } from './search-page/search-page.component';
 import {FormsModule} from "@angular/forms";
 import {AuthInterceptor} from "./AuthInterceptor";
+import { MainPageCompanyComponent } from './main-page-company/main-page-company.component';
+import { CompanyVacanciesComponent } from './company-vacancies/company-vacancies.component';
+import { VacancyDetailComponent } from './vacancy-detail/vacancy-detail.component';
 
 
 @NgModule({
@@ -44,6 +47,9 @@ import {AuthInterceptor} from "./AuthInterceptor";
     MyVacanciesEmployerComponent,
     CandidatesEmployerComponent,
     SearchPageComponent,
+    MainPageCompanyComponent,
+    CompanyVacanciesComponent,
+    VacancyDetailComponent,
   ],
     imports: [
         BrowserModule,

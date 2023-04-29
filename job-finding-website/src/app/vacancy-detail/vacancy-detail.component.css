@@ -1,0 +1,43 @@
+.vacancy-detail {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.vacancy-detail .title {
+    margin-top: 0;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.vacancy-detail .info {
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.vacancy-detail .info > * {
+    margin-right: 20px;
+}
+
+.vacancy-detail .experience::before {
+    content: "Experience: ";
+}
+
+.vacancy-detail .city::before {
+    content: "City: ";
+}
+
+.vacancy-detail .salary::before {
+    content: "Salary: ";
+}
+
+.vacancy-detail .address {
+    margin-top: 20px;
+}
+
+.vacancy-detail .description {
+    margin-top: 20px;
+}

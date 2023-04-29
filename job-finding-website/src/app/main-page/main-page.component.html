@@ -6,13 +6,17 @@
       <input type="text" [(ngModel)]="query" name="q" placeholder="Search...">
       <button type="submit" (click)="searchVacancies(query)">Search</button>
     </form>
+    <div class="button-group">
+      <a class="button_under_search" routerLink="/">Vacancies</a>
+      <a class="button_under_search" routerLink="/companies">Companies</a>
+    </div>
   </div>
 
   <div id = "main">
     <div id = "vacancies">
       <div class = "items" *ngFor = "let item of vacancies">
         <div class = "item-details">
-            <a class = "vacancy-name"> {{item.name}} </a>
+            <a class = "vacancy-name" routerLink="/vacancy-detail"> {{item.name}} </a>
           <div class = "vacancy-salary">{{item.salary}} KZT</div>
           <div class = "vacancy-city">{{item.city}} </div>
         </div>

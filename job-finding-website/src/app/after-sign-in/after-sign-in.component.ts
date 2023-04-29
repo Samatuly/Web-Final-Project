@@ -11,6 +11,7 @@ import {VacanciesService} from "../vacancies.service";
 export class AfterSignInComponent implements OnInit{
   vacancies: Vacancy[] = [];
   query: string = '';
+  logged: boolean = true;
   constructor(private route: ActivatedRoute, private service: VacanciesService) {}
 
   ngOnInit(){
@@ -23,6 +24,11 @@ export class AfterSignInComponent implements OnInit{
 
   searchVacancies(query: string) {
     this.service.getSearchVacancies(query).subscribe((data) => this.vacancies = data);
+  }
+
+  logout(){
+    localStorage.removeItem('token');
+    this.logged = false;
   }
 
 }
