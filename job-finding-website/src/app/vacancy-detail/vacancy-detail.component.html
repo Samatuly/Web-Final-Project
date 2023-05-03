@@ -2,14 +2,14 @@
 <main>
     <div id = "main">
         <div id = "vacancies">
-            <div class = "items" *ngFor = "let item of vacancy | keyvalue">
+            <div class = "items" *ngFor = "let item of vacancy">
                 <div class = "item-details">
-                    <a class = "vacancy-name" *ngIf="item.key === 'name'"> {{item.value}}</a>
-                    <div class = "vacancy-experience" *ngIf="item.key === 'experience'">Minimum required experience: {{item.value}} years</div>
-                    <div class = "vacancy-city" *ngIf="item.key === 'city'">{{item.value}} </div>
-                    <div class = "vacancy-location" *ngIf="item.key === 'location'">Address: {{item.value}}</div>
-                    <div class = "vacancy-salary" *ngIf="item.key === 'salary'">{{item.value}} KZT</div>
-                    <div class = "vacancy-description" *ngIf="item.key === 'description'">{{item.value}}</div>
+                    <a class = "vacancy-name"> {{item.name}}</a>
+<!--                    <div class = "vacancy-experience" *ngIf="item.key === 'experience'">Minimum required experience: {{item.value}} years</div>-->
+<!--                    <div class = "vacancy-city" *ngIf="item.key === 'city'">{{item.value}} </div>-->
+<!--                    <div class = "vacancy-location" *ngIf="item.key === 'location'">Address: {{item.value}}</div>-->
+<!--                    <div class = "vacancy-salary" *ngIf="item.key === 'salary'">{{item.value}} KZT</div>-->
+<!--                    <div class = "vacancy-description" *ngIf="item.key === 'description'">{{item.value}}</div>-->
                 </div>
             </div>
         </div>

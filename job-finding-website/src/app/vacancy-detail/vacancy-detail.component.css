@@ -120,9 +120,7 @@ footer {
 .vacancy-name {
     font-weight: 700;
     font-size: 22px;
-    color: #2793e0;
     text-decoration: none;
-    cursor: pointer;
 }
 
 .vacancy-city{

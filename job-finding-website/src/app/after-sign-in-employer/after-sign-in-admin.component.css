@@ -1,0 +1,82 @@
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.job-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.job-item {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.job-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.job-company {
+    font-size: 16px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.job-description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.job-location {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+.vacancies-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.vacancy {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.vacancy h3 {
+    margin-top: 0;
+}
+
+.buttons button {
+    margin-right: 10px;
+}
+
+.buttons button:last-child {
+    margin-right: 0;
+}
+
+.my-vacancies-button{
+    border: none;
+    color: #ffffff;
+    padding: 5px 10px 5px 10px;
+    cursor: pointer;
+}
+
+.response{
+    background-color: #555555;
+}
+
+.edit{
+    background-color: #2a7fd3;
+}
+
+.delete{
+    background-color: #e73131;
+}

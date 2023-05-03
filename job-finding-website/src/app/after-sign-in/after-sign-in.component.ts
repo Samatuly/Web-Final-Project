@@ -9,6 +9,7 @@ import {VacanciesService} from "../vacancies.service";
   styleUrls: ['./after-sign-in.component.css']
 })
 export class AfterSignInComponent implements OnInit{
+  public showWarningBox = false;
   vacancies: Vacancy[] = [];
   query: string = '';
   logged: boolean = true;
@@ -24,6 +25,10 @@ export class AfterSignInComponent implements OnInit{
 
   searchVacancies(query: string) {
     this.service.getSearchVacancies(query).subscribe((data) => this.vacancies = data);
+  }
+
+  showWarning() {
+    this.showWarningBox = true;
   }
 
   logout(){

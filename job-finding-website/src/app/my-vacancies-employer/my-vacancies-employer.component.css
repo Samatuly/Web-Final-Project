@@ -61,3 +61,22 @@
 .buttons button:last-child {
     margin-right: 0;
 }
+
+.my-vacancies-button{
+    border: none;
+    color: #ffffff;
+    padding: 5px 10px 5px 10px;
+    cursor: pointer;
+}
+
+.response{
+    background-color: #555555;
+}
+
+.edit{
+    background-color: #2a7fd3;
+}
+
+.delete{
+    background-color: #e73131;
+}

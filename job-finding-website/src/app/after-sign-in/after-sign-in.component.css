@@ -133,3 +133,24 @@ footer {
     font-family: Arial, sans-serif;
     padding: 10px 0px 10px 0px;
 }
+
+.button-response{
+    color: #ffffff;
+    margin-top: 20px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    background-color: #e73131;
+    box-shadow: 0 2px 6px #dbddde;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.button-response:hover {
+    transform: translateY(-2px);
+}
+
+.button-response, .button_under_search:active {
+    transform: translateY(0);
+    box-shadow: 0 0 7px rgba(0,0,0,0.5);
+}
