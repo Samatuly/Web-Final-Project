@@ -6,7 +6,7 @@
         <div id = "vacancies">
             <div class = "items" *ngFor = "let item of vacancies">
                 <div class = "item-details">
-                    <a class = "vacancy-name"> {{item.name}}</a>
+                    <a class = "vacancy-name" [routerLink]="['/vacancies', item.id]"> {{item.name}}</a>
                     <div class = "vacancy-salary">{{item.salary}} KZT</div>
                     <div class = "vacancy-city">{{item.city}} </div>
                 </div>

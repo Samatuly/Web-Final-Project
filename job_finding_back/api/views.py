@@ -7,17 +7,18 @@ from django.views.decorators.csrf import csrf_exempt
 from rest_framework import status
 from rest_framework_jwt.views import ObtainJSONWebToken
 from rest_framework.views import APIView
-from .serializers import vacancySerializer, companySerializer
+from .serializers import vacancySerializer, companySerializer, vacancyModelSerializer
 from .models import Vacancy, Company
 from django.db.models import Q
 import json
 
 @csrf_exempt
-def companies_list(request):
+def companies_list(request):  #FBV
     if request.method == 'GET':
         companies = Company.objects.all()
         serializer = companySerializer(companies, many = True)
         return JsonResponse(serializer.data, safe=False)
+
     elif request.method == 'POST':
         data = json.loads(request.body)
         print(data.get('name', ''))
@@ -28,9 +29,8 @@ def companies_list(request):
         serializer = companySerializer(company, many = False)
         return JsonResponse(serializer.data)
 
-
 @csrf_exempt
-def company_detail(request, company_id):
+def company_detail(request, company_id): #FBV
     try:
         company = Company.objects.get(id=company_id)
         company_json = company.to_json()
@@ -52,20 +52,22 @@ def company_detail(request, company_id):
         company.save()
 
         return JsonResponse(company.to_json())
+
     elif request.method == 'DELETE':
         company.delete()
         return JsonResponse({'delete': True})
 
-def company_vacancies(request, company_id):
+def company_vacancies(request, company_id): #FBV
     vacancies = Vacancy.objects.filter(company_id=company_id)
     vacancies_json = [i.to_json() for i in vacancies]
     return JsonResponse(vacancies_json, safe=False)
 
-class vacancies_list(APIView):
+class vacancies_list(APIView): #CBV
     def get(self, request):
         vacancies = Vacancy.objects.all()
         serializer = vacancySerializer(vacancies, many = True)
         return JsonResponse(serializer.data, safe=False)
+
     def post(self, request):
         data = json.loads(request.body)
         company = Vacancy.objects.create(
@@ -77,20 +79,19 @@ class vacancies_list(APIView):
             description = data.get('description', ''),
             company_id = data.get('company', '')
             )
-        serializer = vacancySerializer(company, many = False)
+        serializer = vacancyModelSerializer(company, many = False)
         return JsonResponse(serializer.data)
 
 
-class vacancy_detail(APIView):
-
+class vacancy_detail(APIView): #CBV
     def get(self, request, vacancy_id):
         try:
             vacancy = Vacancy.objects.get(id=vacancy_id)
         except Vacancy.DoesNotExist as e:
             return JsonResponse({"error": str(e)})
 
-        serialazer = vacancySerializer(vacancy, many=False)
-        return JsonResponse(serialazer.data, safe=False)
+        serializer = vacancySerializer(vacancy, many=False)
+        return JsonResponse(serializer.data, safe=False)
 
     def delete(self, request, vacancy_id):
         try:
@@ -99,7 +100,7 @@ class vacancy_detail(APIView):
             return JsonResponse({"error": str(e)})
 
         vacancy.delete()
-        return JsonResponse({"delete": "succesful"})
+        return JsonResponse({"delete": "successful"})
 
     def put(self, request, vacancy_id):
         try:
@@ -108,14 +109,13 @@ class vacancy_detail(APIView):
             return JsonResponse({"error": str(e)})
 
         data = json.loads(request.body)
-
         name = data.get('name', '')
         experience = data.get('experience', '')
         city = data.get('city', '')
         location = data.get('location', '')
         salary = data.get('salary', '')
         description = data.get('description', '')
-        company = data.get('company', '')
+        company_id = data.get('company', '')
 
         vacancy.name = name
         vacancy.experience = experience
@@ -123,20 +123,19 @@ class vacancy_detail(APIView):
         vacancy.location = location
         vacancy.salary = salary
         vacancy.description = description
-        vacancy.company_id = company
+        vacancy.company_id = company_id
         vacancy.save()
 
-        serializer = vacancySerializer(vacancy, many=False)
-
+        serializer = vacancyModelSerializer(vacancy, many=False)
         return JsonResponse(serializer.data)
 
-def search_vacancies(request):
+def search_vacancies(request): #FBV
     query = request.GET.get('q', '')
     results = Vacancy.objects.filter(Q(name__icontains=query))
     data = [v.to_json() for v in results]
     return JsonResponse(data, safe=False)
 
-def search_companies(request):
+def search_companies(request): #FBV
     query2 = request.GET.get('q', '')
     results = Company.objects.filter(Q(name__icontains=query2))
     data = [v.to_json() for v in results]

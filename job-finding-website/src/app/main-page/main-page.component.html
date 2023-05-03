@@ -14,11 +14,14 @@
 
   <div id = "main">
     <div id = "vacancies">
+      <h3>Found: {{vacancies.length}} vacancies</h3>
       <div class = "items" *ngFor = "let item of vacancies">
         <div class = "item-details">
-            <a class = "vacancy-name" routerLink="/vacancy-detail"> {{item.name}} </a>
+          <a class = "vacancy-name" [routerLink]="['/vacancies', item.id]"> {{item.name}} </a>
           <div class = "vacancy-salary">{{item.salary}} KZT</div>
-          <div class = "vacancy-city">{{item.city}} </div>
+          <div class = "vacancy-city">{{item.city}}</div>
+          <button class = "button-response" (click)="showWarning()">Response</button>
+          <app-warning-box *ngIf="showWarningBox"></app-warning-box>
         </div>
       </div>
     </div>

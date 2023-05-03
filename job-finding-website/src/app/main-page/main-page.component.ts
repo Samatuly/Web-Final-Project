@@ -1,4 +1,4 @@
-import {Component, OnChanges, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Vacancy} from "../models";
 import {ActivatedRoute} from "@angular/router";
 import {VacanciesService} from "../vacancies.service";
@@ -10,6 +10,7 @@ import {HttpClient} from "@angular/common/http";
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent implements OnInit{
+  public showWarningBox = false;
   vacancies: Vacancy[];
   query: string;
   constructor(private route: ActivatedRoute, private service: VacanciesService) {
@@ -27,5 +28,9 @@ export class MainPageComponent implements OnInit{
 
   searchVacancies(query: string) {
     this.service.getSearchVacancies(query).subscribe((data) => this.vacancies = data);
+  }
+
+  showWarning() {
+    this.showWarningBox = true;
   }
 }

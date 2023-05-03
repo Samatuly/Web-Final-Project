@@ -1,43 +1,136 @@
-.vacancy-detail {
-    max-width: 800px;
-    margin: 0 auto;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.vacancy-detail .title {
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: right;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.search{
+    background-color: #f2f2f2;
+    padding: 40px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.search h2 {
     margin-top: 0;
-    font-size: 28px;
-    font-weight: bold;
 }
 
-.vacancy-detail .info {
-    display: flex;
-    margin-top: 10px;
-    align-items: center;
+.search input {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
 }
 
-.vacancy-detail .info > * {
-    margin-right: 20px;
+.search button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
 }
 
-.vacancy-detail .experience::before {
-    content: "Experience: ";
+.job-listings {
+    margin-top: 40px;
+}
+.job-listings ul {
+    list-style: none;
+    padding: 0;
 }
 
-.vacancy-detail .city::before {
-    content: "City: ";
+.job-listings li {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
-.vacancy-detail .salary::before {
-    content: "Salary: ";
+.job-listings li h3 {
+    margin-top: 0;
 }
 
-.vacancy-detail .address {
-    margin-top: 20px;
+.job-listings li p {
+    margin-bottom: 10px;
 }
 
-.vacancy-detail .description {
-    margin-top: 20px;
+.job-listings li a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.items {
+    box-shadow: 0 2px 12px #dbddde;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#link-vacancy:hover {
+    color: red;
+}
+
+.item-details {
+    padding: 10px;
+}
+
+.vacancy-name {
+    font-weight: 700;
+    font-size: 22px;
+    color: #2793e0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.vacancy-city{
+    font-weight: 300;
+}
+
+.vacancy-salary{
+    font-weight: 600;
+    font-family: Arial, sans-serif;
+    padding: 10px 0px 10px 0px;
 }

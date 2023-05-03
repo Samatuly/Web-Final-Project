@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {AuthToken, Company, Vacancy} from "./models";
+import {VacancyDetailComponent} from "./vacancy-detail/vacancy-detail.component";
 
 @Injectable({
   providedIn: 'root'
@@ -24,6 +25,9 @@ export class VacanciesService {
   }
   getCompanyVacancies(id:any):Observable<Vacancy[]>{
     return this.client.get<Vacancy[]>(`${this.BASE_URL}/api/companies/${id}/vacancies/`)
+  }
+  getVacancyDetail(id:any):Observable<Vacancy[]>{
+    return this.client.get<Vacancy[]>(`${this.BASE_URL}/api/vacancies/${id}/`)
   }
 
 

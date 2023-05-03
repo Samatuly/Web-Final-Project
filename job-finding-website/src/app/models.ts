@@ -11,7 +11,7 @@ export interface Vacancy{
     city: string;
     location: string;
     salary: string;
-    description: string;
+    description: any;
     company_id: number;
 }
 

@@ -26,6 +26,8 @@ import {AuthInterceptor} from "./AuthInterceptor";
 import { MainPageCompanyComponent } from './main-page-company/main-page-company.component';
 import { CompanyVacanciesComponent } from './company-vacancies/company-vacancies.component';
 import { VacancyDetailComponent } from './vacancy-detail/vacancy-detail.component';
+import {NgArrayPipesModule} from "ngx-pipes";
+import { WarningBoxComponent } from './warning-box/warning-box.component';
 
 
 @NgModule({
@@ -50,6 +52,7 @@ import { VacancyDetailComponent } from './vacancy-detail/vacancy-detail.componen
     MainPageCompanyComponent,
     CompanyVacanciesComponent,
     VacancyDetailComponent,
+    WarningBoxComponent,
   ],
     imports: [
         BrowserModule,
@@ -57,14 +60,15 @@ import { VacancyDetailComponent } from './vacancy-detail/vacancy-detail.componen
         HttpClientModule,
         HttpClientXsrfModule,
         RouterLink,
-        FormsModule
+        FormsModule,
+        NgArrayPipesModule
     ],
   providers: [
       {
           provide: HTTP_INTERCEPTORS,
           useClass: AuthInterceptor,
-          multi: true
-      }
+          multi: true,
+      },
   ],
   bootstrap: [AppComponent]
 })

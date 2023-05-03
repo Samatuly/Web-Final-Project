@@ -40,7 +40,7 @@ const routes: Routes = [
   {path: 'my-vacancies-employer', component: MyVacanciesEmployerComponent},
   {path: 'candidates-employer', component: CandidatesEmployerComponent},
   {path: 'search', component: SearchPageComponent},
-  {path: 'vacancy-detail', component: VacancyDetailComponent}
+  {path: 'vacancies/:id', component: VacancyDetailComponent}
 ]
 
 @NgModule({
