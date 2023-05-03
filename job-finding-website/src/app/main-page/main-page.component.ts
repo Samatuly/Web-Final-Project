@@ -31,6 +31,6 @@ export class MainPageComponent implements OnInit{
   }
 
   showWarning() {
-    this.showWarningBox = true;
+    this.showWarningBox = !this.showWarningBox;
   }
 }
