@@ -7,5 +7,15 @@ import {MainPageComponent} from "../main-page/main-page.component";
   styleUrls: ['./warning-box.component.css']
 })
 export class WarningBoxComponent {
+  constructor(private service: VacanciesService, private mainComponent: MainPageComponent) {
 
+  }
+  cancelWarning() {
+    this.mainComponent.showWarningBox = !this.mainComponent.showWarningBox
+  }
+
+  responseWarning(){
+    //There should be function of the button
+    this.mainComponent.showWarningBox = !this.mainComponent.showWarningBox
+  }
 }
