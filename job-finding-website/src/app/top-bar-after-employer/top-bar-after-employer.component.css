@@ -11,6 +11,8 @@
 .top-bar__logo{
     color: #ffffff;
     cursor: pointer;
+    max-width: 200px;
+    display: inline-block;
 }
 
 .top-bar__search input[type="text"] {
